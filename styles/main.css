@@ -1,14 +1,14 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
 }
 
 html {
     background-image: url(../images/desktop_letterbox_retina-TAE-Landing-Page_Hero-Image.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    /*background-position: ;*/
+    background-position: center;
     background-attachment: fixed;
 }
 
@@ -16,9 +16,9 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
     max-width: 1000px;
-    margin: 0  auto;
+    margin: 0 auto;
     background-color: rgba(245, 245, 245, 0.454);
- 
+    line-height: 1.5;
 }
 
 header img {
@@ -30,4 +30,144 @@ header img {
 header {
     display: flex;
     align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 300%;
+    padding-bottom: 20px;
+}
+
+.intro {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.intro ul {
+    margin-left: 8%;
+}
+
+.intro h4 {
+    padding-top: 15px;
+}
+
+.intro p::first-line {
+    font-size: 110%;
+    font-weight: 500;
+}
+
+/* form formatting */
+
+.formgroup {
+    display: flex;
+    align-items: baseline;
+}
+
+.formgroup label {
+    width: 30%;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.formgroup h5 {
+    padding-top: 20px;
+}
+
+input[type=text],
+input[type=date],
+input[type=tel],
+input [type=email],
+select {
+    font-size: 90%;
+    width: 40%;
+}
+
+.radiogroup {
+    flex-direction: column;
+    margin-left: 30%;
+}
+
+.radiogroup label {
+    text-align: left;
+    margin-left: 5px;
+}
+
+.radiotype label {
+    width: 50%;
+    text-align: left;
+    padding-left: 5px;
+    padding-top: 8px;
+}   
+
+input [type=checkbox] {
+    margin-left: 15%;
+}
+
+input[type=submit], input[text=reset] {
+    background-color: lavender;
+    padding: 8px 15px;
+    border: 1px solid dodgerblue;
+    border-radius: 7px;
+}
+
+input[type=submit]:hover, input[text=reset]:hover {
+    background-color: dodgerblue;
+    border: lavender;
+    color: white;
+}
+
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    gap: 15px;
+}
+
+footer {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 90%;
+    font-variant: small-caps;
+    background-color: lavender;
+}
+
+/* media query */
+
+@media (max-width: 767px) {
+    body {
+        width: 100%;
+    }
+    header {
+        flex-direction: column;
+    }
+    header h2 {
+        font-size: 125%;
+        text-align: center;
+    }
+    .intro {
+        width: 95%;
+        margin: auto;
+    }
+    form {
+        width: 80%;
+        margin: auto;
+    }
+    .formgroup {
+        flex-direction: column;
+    }
+    .radiotype {
+        flex-direction: row;
+    }
+    .formgroup label {
+        width: 95%;
+        text-align: left;
+    }
+    input[type=text], input[type=date] {
+        width: 95%;
+    }
+
 }
